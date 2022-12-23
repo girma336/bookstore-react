@@ -1,0 +1,19 @@
+.main-category {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+  padding-bottom: 50px;
+  font-size: 30px;
+}
+
+.center {
+  text-align: center;
+}
+
+.btn {
+  padding: 8px 12px;
+  font-size: 18px;
+  background: #0d39e8;
+  border: 1px solid #0d39e8;
+  color: #fff;
+}
