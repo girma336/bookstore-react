@@ -24,11 +24,9 @@ const Books = ({ book }) => {
           </div>
 
           <div className="button-nav">
-            <ul>
-              <button className="noborder" type="button">Comment</button>
-              <button className="noborder" type="button">Remove</button>
-              <button className="noborder" type="button" style={{ border: 'none' }}>Edit</button>
-            </ul>
+            <button className="noborder" type="button">Comment</button>
+            <button className="noborder" type="button">Remove</button>
+            <button className="noborder" type="button" style={{ border: 'none' }}>Edit</button>
           </div>
         </div>
         <div className="part-two">
@@ -37,7 +35,7 @@ const Books = ({ book }) => {
         <div className="part-three">
           <h4 className="chapter-curr">Current Chapter</h4>
           <p className="current">Chapter 17</p>
-          <button className="btn" type="button">UPDATE PROGRESS</button>
+          <button className="btn-n" type="button">UPDATE PROGRESS</button>
         </div>
       </div>
     </div>
