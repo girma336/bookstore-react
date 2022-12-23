@@ -12,6 +12,8 @@
 
 .btn {
   padding: 8px 12px;
-  background: blueviolet;
   font-size: 18px;
+  background: #0d39e8;
+  border: 1px solid #0d39e8;
+  color: #fff;
 }
