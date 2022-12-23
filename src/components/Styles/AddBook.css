@@ -10,17 +10,14 @@
 
 form input {
   padding: 6px 10px;
-  width: 42.5%;
-}
-
-form select {
-  padding: 6px 10px;
   width: 30%;
-  margin-left: 2%;
+  margin-right: 20px;
+  border: rgb(250, 234, 234) 1px solid;
+  font-size: 18px;
 }
 
 form button {
-  padding: 7px 12px;
+  padding: 9px 12px;
   width: 20%;
   margin-left: 2%;
   color: #fff;

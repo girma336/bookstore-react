@@ -9,11 +9,11 @@ const AddBook = () => (
         className="input-text"
         placeholder="Add Book..."
       />
-      <select>
-        <option value="Action">Action</option>
-        <option value="Scinenc Fiction">Science Fiction</option>
-        <option value="Economy">Economy</option>
-      </select>
+      <input
+        type="text"
+        className="input-text"
+        placeholder="Add Author..."
+      />
       <button className="input-submit" type="button">
         ADD BOOK
       </button>

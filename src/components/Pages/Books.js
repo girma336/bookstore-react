@@ -25,9 +25,9 @@ const Books = ({ book }) => {
 
           <div className="button-nav">
             <ul>
-              <li>Comment</li>
-              <li>Remove</li>
-              <li style={{ border: 'none' }}>Edit</li>
+              <button className="noborder" type="button">Comment</button>
+              <button className="noborder" type="button">Remove</button>
+              <button className="noborder" type="button" style={{ border: 'none' }}>Edit</button>
             </ul>
           </div>
         </div>
