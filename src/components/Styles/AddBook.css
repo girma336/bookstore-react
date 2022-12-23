@@ -1,0 +1,30 @@
+.form-add-book {
+  padding-bottom: 40px;
+  width: 95%;
+  margin: 20px auto;
+}
+
+.form-add-book h1 {
+  font-size: 18px;
+}
+
+form input {
+  padding: 6px 10px;
+  width: 42.5%;
+}
+
+form select {
+  padding: 6px 10px;
+  width: 30%;
+  margin-left: 2%;
+}
+
+form button {
+  padding: 7px 12px;
+  width: 20%;
+  margin-left: 2%;
+  color: #fff;
+  background-color: blue;
+  border: 1px solid blue;
+  opacity: 0.8;
+}

@@ -1,0 +1,39 @@
+.head-nav {
+  padding: 20px 2%;
+  display: flex;
+  align-items: center;
+  height: auto;
+  border-bottom: 1px solid #666;
+}
+
+.logo {
+  width: 25%;
+  font-size: 2rem;
+  color: #0290ff;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.head-nav li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+.icon-person {
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  padding: 8px;
+  border: 1px solid rgb(220, 217, 217);
+  border-radius: 50%;
+  color: #0290ff;
+}
