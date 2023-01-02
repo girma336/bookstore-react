@@ -1,6 +1,6 @@
 export const initialState = [];
 
-const CHECK_STATUS = 'check-states';
+const CHECK_STATUS = 'bookstore-react/categories/check-states';
 export function checkStates() {
   return { type: CHECK_STATUS };
 }

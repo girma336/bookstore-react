@@ -1,7 +1,7 @@
 const initialState = [];
 
-const ADD_BOOK = 'add_book';
-const REMOVE_BOOK = 'remove_book';
+const ADD_BOOK = 'bookstore-react/books/add-book';
+const REMOVE_BOOK = 'bookstore-react/books/remove-book';
 
 export default function reducer(state = initialState, action) {
   switch (action.value) {
