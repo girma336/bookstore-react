@@ -1,31 +1,26 @@
 import React from 'react';
-import '../Styles/Books.css';
+import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { removeBook } from '../redux/books/books';
 
-const Books = ({ book }) => {
-  Books.propTypes = {
-    book: PropTypes.shape({
-      category: PropTypes.string.isRequired,
-      title: PropTypes.string.isRequired,
-      author: PropTypes.string.isRequired,
-    }),
-  };
-  Books.defaultProps = {
-    book: null,
+const BookList = ({ author, title, id }) => {
+  const dispatch = useDispatch();
+  const handleRemove = (id) => {
+    dispatch(removeBook(id));
   };
   return (
     <div>
       <div className="book-container">
         <div className="part-one">
           <div>
-            <p className="catagory">{book.category}</p>
-            <h2 className="title">{book.title}</h2>
-            <p className="author">{book.author}</p>
+            <p className="catagory">{author}</p>
+            <h2 className="title">{title}</h2>
+            <p className="author">{author}</p>
           </div>
 
           <div className="button-nav">
             <button className="noborder" type="button">Comment</button>
-            <button className="noborder" type="button">Remove</button>
+            <button className="noborder" type="button" onClick={() => handleRemove(id)}>Remove</button>
             <button className="noborder" type="button" style={{ border: 'none' }}>Edit</button>
           </div>
         </div>
@@ -41,4 +36,10 @@ const Books = ({ book }) => {
     </div>
   );
 };
-export default Books;
+
+BookList.propTypes = {
+  author: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.number.isRequired,
+};
+export default BookList;
