@@ -9,20 +9,21 @@ const BookForm = () => {
   const [newValue, setNeValue] = useState({
     title: '',
     author: '',
+    category: '',
   });
 
   const changeHandler = (e) => {
-    setNeValue({ ...newValue, [e.target.name]: e.target.value });
+    setNeValue({
+      ...newValue,
+      item_id: uuidv4(),
+      [e.target.name]: e.target.value,
+    });
   };
+
   const submitHandler = (e) => {
     e.preventDefault();
-    const newBook = {
-      id: uuidv4(),
-      title: newValue.title,
-      author: newValue.author,
-    };
-    dispatch(addBook(newBook));
-    setNeValue({ title: '', author: '' });
+    dispatch(addBook(newValue));
+    setNeValue({ title: '', author: '', category: '' });
   };
 
   return (
@@ -44,6 +45,13 @@ const BookForm = () => {
           value={newValue.author}
           name="author"
           onChange={changeHandler}
+        />
+        <input
+          type="text"
+          name="category"
+          placeholder="Category"
+          onChange={changeHandler}
+          required
         />
         <button className="input-submit" type="submit">
           ADD BOOK

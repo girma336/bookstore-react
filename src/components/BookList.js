@@ -3,7 +3,9 @@ import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
 import { removeBook } from '../redux/books/books';
 
-const BookList = ({ author, title, id }) => {
+const BookList = ({
+  author, title, id, category,
+}) => {
   const dispatch = useDispatch();
   const handleRemove = (id) => {
     dispatch(removeBook(id));
@@ -13,7 +15,7 @@ const BookList = ({ author, title, id }) => {
       <div className="book-container">
         <div className="part-one">
           <div>
-            <p className="catagory">{author}</p>
+            <p className="catagory">{category}</p>
             <h2 className="title">{title}</h2>
             <p className="author">{author}</p>
           </div>
@@ -38,6 +40,7 @@ const BookList = ({ author, title, id }) => {
 };
 
 BookList.propTypes = {
+  category: PropTypes.string.isRequired,
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   id: PropTypes.number.isRequired,
