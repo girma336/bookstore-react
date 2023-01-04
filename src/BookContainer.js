@@ -1,15 +1,15 @@
 import { Route, Routes } from 'react-router-dom';
 import React from 'react';
-import Navbar from './Navbar';
-import './Styles/BookContainer.css';
-import Catagory from './Pages/Categories';
-import Book from './Books/Book';
+import Navbar from './components/Navbar';
+import './components/Styles/BookContainer.css';
+import Catagory from './components/Categories';
+import Books from './components/Books';
 
 const BookContainer = () => (
   <div className="container">
     <Navbar />
     <Routes>
-      <Route path="/" element={<Book />} />
+      <Route path="/" element={<Books />} />
       ;
       <Route path="/category" element={<Catagory />} />
       ;
