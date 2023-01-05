@@ -1,42 +1,47 @@
-const books = [{
-  author: 'Frank Herbert',
-  title: 'Dune',
-  id: 0,
-},
-{
-  author: 'Berhanu Tarekegn',
-  title: 'Time mach',
-  id: 2,
-},
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import BookService from '../../services/service';
 
-{
-  author: 'Girma Trekegn',
-  title: 'Money',
-  id: 3,
-}];
+const ADD_BOOK = 'bookstore-react/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore-react/REMOVE_BOOK';
+const GET_BOOK = 'bookstore-react/GET_BOOK';
 
-const ADD_BOOK = 'bookstore-react/books/add-book';
-const REMOVE_BOOK = 'bookstore-react/books/remove-book';
-
-export const addBook = (newBook) => (dispatch) => {
-  dispatch({ type: ADD_BOOK, payload: newBook });
-};
-
-export const removeBook = (id) => (dispatch) => {
-  dispatch({ type: REMOVE_BOOK, payload: id });
-};
-
-const bookReducer = (state = books, action) => {
-  switch (action.type) {
-    case ADD_BOOK:
-      return [...state, action.payload];
-
-    case REMOVE_BOOK:
-      return state.filter((book) => book.id !== action.payload);
-
-    default:
-      return state;
+export const getBook = createAsyncThunk(GET_BOOK, async () => {
+  try {
+    const response = await BookService.getAll();
+    return response.data;
+  } catch (error) {
+    throw new Error(error);
   }
-};
+});
 
-export default bookReducer;
+export const addBook = createAsyncThunk(ADD_BOOK, async (payload, thunkAPI) => {
+  try {
+    await BookService.postBook(payload);
+    thunkAPI.dispatch(getBook());
+  } catch (error) {
+    throw new Error(error);
+  }
+});
+
+export const removeBook = createAsyncThunk(
+  REMOVE_BOOK,
+  async (payload, thunkAPI) => {
+    try {
+      await BookService.deletBook(payload);
+      thunkAPI.dispatch(getBook());
+    } catch (error) {
+      throw new Error(error);
+    }
+  },
+);
+
+const bookSlice = createSlice({
+  name: 'book-store',
+  initialState: {},
+  extraReducers: (builder) => {
+    builder.addCase(getBook.fulfilled, (state, action) => action.payload);
+  },
+});
+
+const BookReducer = bookSlice.reducer;
+export default BookReducer;
