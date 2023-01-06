@@ -12,8 +12,13 @@ form input {
   padding: 6px 10px;
   width: 20%;
   margin-right: 20px;
-  border: rgb(250, 234, 234) 1px solid;
+  border: #0290ff 1px solid;
   font-size: 18px;
+  margin-bottom: 20px;
+}
+
+form input:focus {
+  outline: none;
 }
 
 form button {
@@ -21,7 +26,7 @@ form button {
   width: 20%;
   margin-left: 2%;
   color: #fff;
-  background-color: blue;
-  border: 1px solid blue;
+  background-color: #0290ff;
+  border: 1px solid #0290ff;
   opacity: 0.8;
 }
