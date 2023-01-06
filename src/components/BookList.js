@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import PropTypes from 'prop-types';
+import { FaCircleNotch } from 'react-icons/fa';
 import { removeBook } from '../redux/books/books';
 
 const BookList = ({
@@ -27,7 +28,11 @@ const BookList = ({
           </div>
         </div>
         <div className="part-two">
-          60 %
+          <FaCircleNotch className="icon-complete" />
+          <div className="complete">
+            <p className="percent-com">60 %</p>
+            <p className="text-com">complate</p>
+          </div>
         </div>
         <div className="part-three">
           <h4 className="chapter-curr">Current Chapter</h4>

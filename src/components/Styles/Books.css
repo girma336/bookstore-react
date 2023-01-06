@@ -15,30 +15,37 @@
   margin: 5px 0 0 -40px;
 }
 
-.part-one li {
+.part-one button {
   list-style-type: none;
   margin-right: 10px;
   border-right: 2px solid #999;
   padding-right: 8px;
+  color: #0290ff;
+  opacity: 0.6;
 }
 
 .catagory {
   margin: 0;
   font-size: 14px;
   font-weight: 100;
+  text-transform: capitalize;
+  opacity: 0.8;
 }
 
 .part-one .title {
   margin: 0;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   line-height: 1.5;
+  text-transform: capitalize;
 }
 
 .author {
   margin: 0;
   font-size: 14px;
-  color: aqua;
+  color: #0290ff;
+  text-transform: capitalize;
+  opacity: 0.6;
 }
 
 .part-three {
@@ -47,19 +54,47 @@
 }
 
 .chapter-curr {
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
+  color: #888;
+  padding: 5px 0;
+}
+
+.part-two {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.icon-complete {
+  color: #0290ff;
+  font-size: 50px;
+  margin: 10px;
+}
+
+.text-com {
+  margin-top: -25px;
+  color: #888;
+}
+
+.percent-com {
+  font-size: 30px;
+  font-weight: 700;
+  opacity: 0.8;
 }
 
 .current {
   margin: 2px;
   font-style: italic;
+  line-height: 1.2;
+  font-weight: 400;
+  font-size: 18px;
 }
 
 .btn-n {
-  background: #031042;
-  border: 1px solid #0d39e8;
-  padding: 4px 10px;
+  background: #0290ff;
+  border: 1px solid #0290ff;
+  padding: 8px 15px;
   margin-top: 5px;
   color: rgb(255, 255, 255);
   opacity: 0.7;

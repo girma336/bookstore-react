@@ -12,7 +12,7 @@ form input {
   padding: 6px 10px;
   width: 20%;
   margin-right: 20px;
-  border: rgb(146, 168, 236) 1px solid;
+  border: #0290ff 1px solid;
   font-size: 18px;
   margin-bottom: 20px;
 }
@@ -26,7 +26,7 @@ form button {
   width: 20%;
   margin-left: 2%;
   color: #fff;
-  background-color: rgb(12, 12, 103);
-  border: 1px solid blue;
+  background-color: #0290ff;
+  border: 1px solid #0290ff;
   opacity: 0.8;
 }
