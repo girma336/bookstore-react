@@ -30,8 +30,8 @@ const BookList = ({
         <div className="part-two">
           <FaCircleNotch className="icon-complete" />
           <div className="complete">
-            <p className="percent-com">60 %</p>
-            <p className="text-com">complate</p>
+            <p className="percent-com">90 %</p>
+            <p className="text-com">complated</p>
           </div>
         </div>
         <div className="part-three">

@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <div>
       <header className="head-nav">
-        <div className="logo">BookStor Cms</div>
+        <div className="logo">BookStore Cms</div>
         <nav>
           <ul>
             {links.map((link) => (
